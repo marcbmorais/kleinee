@@ -18,11 +18,12 @@ int main(int argc, char** argv)
 	engine.start();
 	engine.attach<DX7>(0);
     engine.attach<PingPong>(0.167, 0.75, 0.333, 0.25); // that will give you a effect of ping pong delay
+	
 
 	// play some notes
 	int notes[] = { 62, 64, 60, 48, 55 };
 	for(int note : notes) {
-		engine.noteOn(note, 127);
+		engine.noteOn(note, 127); /* Make interesting */
 		engine.wait(500);
 		engine.noteOff(note);
 	}
